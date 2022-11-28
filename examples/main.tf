@@ -2,7 +2,7 @@ terraform {
   required_providers {
     jwk = {
       version = "0.1.0"
-      source  = "github.com/braybaut/jwk"
+      source  = "mattclegg/jwk"
     }
     tls = {
       source  = "hashicorp/tls"

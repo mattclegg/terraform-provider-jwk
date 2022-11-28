@@ -1,10 +1,9 @@
-package internal
+package jwk
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"terraform-provider-jwk/internal/jwk"
 
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -40,7 +39,7 @@ func createResourceJwk(ctx context.Context, d *schema.ResourceData, m interface{
 	keypair := d.Get("public_key_pem")
 	keypairstring := fmt.Sprintf("%v", keypair)
 
-	value, err := jwk.CreateJwk(keypairstring)
+	value, err := CreateJwk(keypairstring)
 	if err != nil {
 		return diag.Errorf("failed to create JWK document %s", err)
 	}

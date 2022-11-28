@@ -1,4 +1,4 @@
-package internal
+package jwk
 
 type jwkValues struct {
 	Keys []struct {

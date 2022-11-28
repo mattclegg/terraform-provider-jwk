@@ -1,4 +1,4 @@
-package internal
+package jwk
 
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
